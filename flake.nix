@@ -14,12 +14,12 @@
         };
       in rec {
         devShells.rust = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            cargo-audit
-            cargo-auditable
+          nativeBuildInputs = [
+            pkgs.cargo-audit
+            pkgs.cargo-auditable
 
-            cargo-edit
-            cargo-expand
+            pkgs.cargo-edit
+            pkgs.cargo-expand
           ];
         };
       }
